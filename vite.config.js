@@ -5,6 +5,7 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/Air-purification-scams/', // ← ⚠️ 加這行：GitHub repo 名稱
   plugins: [
     react(),
     tailwindcss()
