@@ -4,8 +4,8 @@ import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
 
 export default defineConfig({
-  base: '/Air-purification-scams/', // ⚠️ 必須與 GitHub repo 名稱完全一致
-  plugins: [react(), tailwindcss()], // ✅ 合併 plugins 陣列
+  base: process.env.NODE_ENV === 'production' ? '/Air-purification-scams/' : '/',
+  plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
